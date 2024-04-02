@@ -8,10 +8,13 @@ class SettingPage extends StatelessWidget{
   @override
   Widget build (BuildContext context){
     return Scaffold(
+      
       appBar: AppBar(
-        title: Text("Setting Page"),
+        title: Text("Setting Pages"),
       ),
-      body: Center(child: Text("Setting Page")),
+      
+      body: Center(child: Text("Setting Page")
+      ),
     );
   }
 }
