@@ -26,6 +26,7 @@ class _CounterPageState extends State<CounterPage> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
           Text("Tapez sur le boutton-"),
           Text(
