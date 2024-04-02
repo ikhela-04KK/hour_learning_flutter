@@ -2,7 +2,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
-import 'package:ikpay/pages/SecondPage.dart';
 
 class FirstPage extends StatelessWidget{
   FirstPage({super.key});
@@ -11,15 +10,15 @@ class FirstPage extends StatelessWidget{
   Widget build (BuildContext context){ 
     return Scaffold(
       appBar: AppBar(
-        title: Text("second page"),
+        title: Text("first page"),
       ), 
       body: Center(
         child: ElevatedButton(
           child: Text("Go to second page"),
           onPressed: () => {
-            Navigator.push(
+            Navigator.pushNamed(
               context,
-              MaterialPageRoute(builder: (context) => SecondPage())
+              '/secondpage'
             )
           },
         ),
