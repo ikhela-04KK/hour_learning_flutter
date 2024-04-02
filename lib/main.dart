@@ -119,15 +119,36 @@ class MyApp extends StatelessWidget {
           //     title: Text(names[index]),
           //   ),
           // ),
-          body: GridView.builder(
-            itemCount: 64,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount:4 
-            ), 
-            itemBuilder: (context, builder)=>Container(
-            color: Colors.deepPurple[400],
-            margin: EdgeInsets.all(2),
-          )),
+        //   body: GridView.builder(
+        //     itemCount: 64,
+        //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        //       crossAxisCount:4 
+        //     ), 
+        //     itemBuilder: (context, builder)=>Container(
+        //     color: Colors.deepPurple[400],
+        //     margin: EdgeInsets.all(2),
+        //   )
+        // ),
+        // body:Stack(
+        //   alignment: Alignment.center, 
+        //   children: [
+        //     Container(
+        //       height: 300,
+        //       width: 300,
+        //       color: Colors.deepPurple[300],
+        //     ),
+        //     Container(
+        //       height: 200,
+        //       width: 200,
+        //       color: Colors.deepPurple[200],
+        //     ),
+        //     Container(
+        //       height: 100,
+        //       width: 100,
+        //       color: Colors.deepPurple[100],
+        //     )
+        //   ],
+        //   ),
         )
       );
   }
