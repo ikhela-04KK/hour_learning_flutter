@@ -65,33 +65,51 @@ class MyApp extends StatelessWidget {
         //     ),
         //   ),
         // ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            Container(
-              width: 400,
-              color: Colors.deepPurple[400],
-              child: Center(
-                child: Text("koffi"),
-              ),
-            ), 
-            Container(
-              width: 400,
-              color: Colors.deepPurple[300],
-              child: Center(
-                child: Text("kan"),
-              ),
-            ), 
-            Container(
-              width: 400,
-              color: Colors.deepPurple[200],
-              child: Center(
-                child: Text("marc"),
-              ),
-            ),
-          ],
-        ),
-      ),
+        // body: ListView(
+        //   scrollDirection: Axis.horizontal,
+        //   children: <Widget>[
+        //     Container(
+        //       width: 400,
+        //       color: Colors.deepPurple[400],
+        //       child: Center(
+        //         child: Text("koffi"),
+        //       ),
+        //     ), 
+        //     Container(
+        //       width: 400,
+        //       color: Colors.deepPurple[300],
+        //       child: Center(
+        //         child: Text("kan"),
+        //       ),
+        //     ), 
+        //     Container(
+        //       width: 400,
+        //       color: Colors.deepPurple[200],
+        //       child: Center(
+        //         child: Text("marc"),
+        //       ),
+        //     ),
+        //   ],
+        // ),
+      //   body: Column(
+      //     children: <Widget>[
+      //       Expanded(
+      //         flex: 1,
+      //         child: Container(color: Colors.deepPurple[400]),
+      //       ),
+      //       Expanded(
+      //         flex: 2,
+      //         child: Container(
+      //           color: Colors.deepPurple[300], 
+      //         ),
+      //       ),
+      //       Expanded(
+      //         flex: 1,
+      //         child: Container(color: Colors.deepPurple[200]),
+      //       ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
