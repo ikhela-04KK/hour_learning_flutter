@@ -149,6 +149,18 @@ class MyApp extends StatelessWidget {
         //     )
         //   ],
         //   ),
+        body: Center(
+          child: GestureDetector(
+            onTap: (){
+              print("on tap");
+            },
+            child: Container(
+              height: 200,
+              width: 200,
+              child: Center(child: Text("Tap me")),
+            ),
+          ),
+        ),
         )
       );
   }
