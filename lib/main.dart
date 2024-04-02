@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(MyApp());
@@ -119,50 +120,125 @@ class MyApp extends StatelessWidget {
           //     title: Text(names[index]),
           //   ),
           // ),
-        //   body: GridView.builder(
-        //     itemCount: 64,
-        //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        //       crossAxisCount:4 
-        //     ), 
-        //     itemBuilder: (context, builder)=>Container(
-        //     color: Colors.deepPurple[400],
-        //     margin: EdgeInsets.all(2),
-        //   )
-        // ),
-        // body:Stack(
-        //   alignment: Alignment.center, 
-        //   children: [
-        //     Container(
-        //       height: 300,
-        //       width: 300,
-        //       color: Colors.deepPurple[300],
-        //     ),
-        //     Container(
-        //       height: 200,
-        //       width: 200,
-        //       color: Colors.deepPurple[200],
-        //     ),
-        //     Container(
-        //       height: 100,
-        //       width: 100,
-        //       color: Colors.deepPurple[100],
-        //     )
-        //   ],
-        //   ),
-        body: Center(
-          child: GestureDetector(
-            onTap: (){
-              print("on tap");
-            },
-            child: Container(
-              height: 200,
-              width: 200,
-              child: Center(child: Text("Tap me")),
-            ),
+          //   body: GridView.builder(
+          //     itemCount: 64,
+          //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          //       crossAxisCount:4
+          //     ),
+          //     itemBuilder: (context, builder)=>Container(
+          //     color: Colors.deepPurple[400],
+          //     margin: EdgeInsets.all(2),
+          //   )
+          // ),
+          // body:Stack(
+          //   alignment: Alignment.center,
+          //   children: [
+          //     Container(
+          //       height: 300,
+          //       width: 300,
+          //       color: Colors.deepPurple[300],
+          //     ),
+          //     Container(
+          //       height: 200,
+          //       width: 200,
+          //       color: Colors.deepPurple[200],
+          //     ),
+          //     Container(
+          //       height: 100,
+          //       width: 100,
+          //       color: Colors.deepPurple[100],
+          //     )
+          //   ],
+          //   ),
+          body: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              SizedBox(
+                width: 20
+              ),
+              Center(
+                child: GestureDetector(
+                  onTap: () {
+                    print("on tap");
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.deepPurple[200],
+                        borderRadius: BorderRadius.circular(20)),
+                    height: 300,
+                    width: 300,
+                    child: Center(
+                      child: Text(
+                        "Tap me",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: "JetBrainMono",
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Center(
+                child: GestureDetector(
+                  onTap: () {
+                    print("on tap");
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple[400],
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    height: 300,
+                    width: 300,
+                    child: Center(
+                      child: Text(
+                        "Tap me",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: "JetBrainMono",
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Center(
+                child: GestureDetector(
+                  onTap: () {
+                    print("on tap");
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.deepPurple[700],
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    height: 300,
+                    width: 300,
+                    child: Center(
+                      child: Text(
+                        "Tap me",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: "JetBrainMono",
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+            ],
           ),
-        ),
-        )
-      );
+        ));
   }
 }
 
