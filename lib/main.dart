@@ -113,12 +113,21 @@ class MyApp extends StatelessWidget {
           //     ],
           //   ),
           // ),
-          body: ListView.builder(
-            itemCount: names.length,
-            itemBuilder: (context, index) => ListTile(
-              title: Text(names[index]),
-            ),
-          ),
+          // body: ListView.builder(
+          //   itemCount: names.length,
+          //   itemBuilder: (context, index) => ListTile(
+          //     title: Text(names[index]),
+          //   ),
+          // ),
+          body: GridView.builder(
+            itemCount: 64,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount:4 
+            ), 
+            itemBuilder: (context, builder)=>Container(
+            color: Colors.deepPurple[400],
+            margin: EdgeInsets.all(2),
+          )),
         )
       );
   }
