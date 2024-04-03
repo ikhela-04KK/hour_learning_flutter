@@ -16,7 +16,8 @@ class _HomePageState extends State<HomePage> {
     ["Make a tutorial", true], 
     ["Build your own", false], 
     ["Talk with Jesus", true],
-    ["Build my social experiance",false]
+    ["Build my social experiance",false], 
+    
   ]; 
 
   // implementez une méthode pour le checkbox 
@@ -27,7 +28,13 @@ class _HomePageState extends State<HomePage> {
       
       backgroundColor: Colors.yellow[200],
       appBar: AppBar(
-        title: Text("ITodo"),
+        title: Text(
+          "ITodo", 
+          style: TextStyle(
+            fontFamily: "JetbrainsMono", 
+            fontSize: 30
+          ),
+          ),
         backgroundColor: Colors.yellow,
         elevation: 0,
         centerTitle: true,

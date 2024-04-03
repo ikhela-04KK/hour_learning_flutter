@@ -14,16 +14,25 @@ class ToDoTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:EdgeInsets.all(25), 
+      padding:EdgeInsets.all(25.0), 
       child: Container(
-        padding: EdgeInsets.all(24),
+        padding: EdgeInsets.all(24.0),
         child: Row(
           children: <Widget>[
-            Checkbox(
-              value: taskCompleted, 
-              onChanged: onChanged, 
+            Expanded(
+              child: Checkbox(
+                value: taskCompleted, 
+                onChanged: onChanged, 
+              ), 
+            ),
+            Expanded(
+              child: Text(
+                taskName, 
+                style: TextStyle(
+                  fontFamily: "JetbrainsMono"
+                ),
               ),
-            Text("Make tutorial"), 
+            )
           ],
         ),
       decoration: BoxDecoration(
