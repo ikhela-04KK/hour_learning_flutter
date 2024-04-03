@@ -20,12 +20,14 @@ class ToDoTitle extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Expanded(
+              flex: 2,
               child: Checkbox(
                 value: taskCompleted, 
                 onChanged: onChanged, 
               ), 
             ),
             Expanded(
+              flex: 7,
               child: Text(
                 taskName, 
                 style: TextStyle(

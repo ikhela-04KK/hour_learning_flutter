@@ -13,19 +13,26 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   List TodoTile = [
-    ["Make a tutorial", true], 
+    ["Make a tutorials", false], 
     ["Build your own", false], 
     ["Talk with Jesus", true],
     ["Build my social experiance",false], 
+    ["Communicating with my jalaa",false], 
+
     
   ]; 
 
   // implementez une méthode pour le checkbox 
-  void CheckBoxChanged(bool? value  , int index){}
+  void checkBoxChanged(bool? value  , int index){
+    setState(() {
+      TodoTile[index][1] = !TodoTile[index][1];
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: Colors.yellow[200],
       appBar: AppBar(
         title: Text(
@@ -45,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           return ToDoTitle(
             taskName: TodoTile[index][0], 
             taskCompleted: TodoTile[index][1], 
-            onChanged: (value) =>CheckBoxChanged(value, index));
+            onChanged: (value) =>checkBoxChanged(value, index));
         },
       )
     );  
