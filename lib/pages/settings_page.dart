@@ -18,12 +18,7 @@ class ShadowClickContainer extends StatelessWidget {
         onTap();
       },
       
-      child: Material(
-        elevation: 70,
-        shadowColor: Colors.black,
-        borderRadius:BorderRadius.circular(20),
-        child: child,
-      ),
+      child: child
     );
   }
 }
