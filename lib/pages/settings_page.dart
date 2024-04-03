@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -8,13 +8,48 @@ class SettingPage extends StatelessWidget{
   @override
   Widget build (BuildContext context){
     return Scaffold(
-      
-      appBar: AppBar(
-        title: Text("Setting Pages"),
-      ),
-      
-      body: Center(child: Text("Setting Page")
-      ),
-    );
+        appBar: AppBar(
+          title: Text("Stage Learing"),
+          centerTitle: true,
+        ),
+        
+        body:Center(
+            child: Container(
+              
+              height: 300,
+              width: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.amber[500], 
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // position de l'ombre dans le conteneur
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  
+                  Icon(
+                    Icons.leaderboard_rounded, 
+                    size: 40,
+                    ), 
+                  Text(
+                    "Grid Learning", 
+                    style:TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.normal,
+                      fontFamily: "JetbrainsMono"
+                    )
+                    )
+                ],
+              ),
+            ),
+        )
+      );
   }
 }
