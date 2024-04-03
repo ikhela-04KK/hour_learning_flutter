@@ -74,7 +74,9 @@ class _HomePageState extends State<HomePage> {
           return ToDoTitle(
             taskName: todoList[index][0], 
             taskCompleted: todoList[index][1], 
-            onChanged: (value) =>checkBoxChanged(value, index));
+            onChanged: (value) =>checkBoxChanged(value, index), 
+            deleteFunction:(p0){}
+            );
         },
       )
     );  
