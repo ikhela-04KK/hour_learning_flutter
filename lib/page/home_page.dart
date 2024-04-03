@@ -29,11 +29,31 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  // function for create a new task 
+    void CreateNewTask() {
+      showDialog(
+        context: context, 
+        builder: (context) => {
+          return DialogBox(
+            
+          )
+        }
+      )
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.yellow[200],
+
+      //  creer un boutton flottant pour l'élément
+      floatingActionButton:FloatingActionButton(
+        onPressed: CreateNewTask, 
+        child: Icon(Icons.add),
+      ,),
+
       appBar: AppBar(
         title: Text(
           "ITodo", 
@@ -57,4 +77,6 @@ class _HomePageState extends State<HomePage> {
       )
     );  
   }
+  
+
 }
