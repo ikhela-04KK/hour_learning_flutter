@@ -1,11 +1,13 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:todo/util/custom_button.dart';
 
 class DialogBox extends StatelessWidget {
 
- 
+  final controller; 
 
-
-  const DialogBox({super.key});
+  DialogBox({super.key , this.controller});
 
   
 
@@ -24,6 +26,8 @@ class DialogBox extends StatelessWidget {
 
           children: <Widget>[
             TextField(
+
+              controller : controller,
               decoration: InputDecoration(
                 // mettre une border autour de l'input 
                 border: OutlineInputBorder(), 
@@ -36,7 +40,21 @@ class DialogBox extends StatelessWidget {
               // pour mettre le boutton saved et le cancel à droite
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                
+
+                // save button
+                CustomButton(
+                  text: "Save", 
+                  onPressed: (){}
+                ),
+
+                // mettre de l'espace entre les bouttons save et cancel 
+                SizedBox(width:8), 
+
+                CustomButton(
+                  text: "Cancel", 
+                  onPressed: (){}
+                )
+
               ],
             )
           ],

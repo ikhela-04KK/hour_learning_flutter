@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
+import 'package:todo/util/dialog_box.dart';
 import 'package:todo/util/todo_title.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,14 +13,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  // variable de classe pour le controller pour capturer les valeurs du inputText
+  final _controller = TextEditingController(); 
+
   List TodoTile = [
     ["Make a tutorials", false], 
     ["Build your own", false], 
     ["Talk with Jesus", true],
     ["Build my social experiance",false], 
     ["Communicating with my jalaa",false], 
-
-    
   ]; 
 
   // implementez une méthode pour le checkbox 
@@ -33,9 +35,9 @@ class _HomePageState extends State<HomePage> {
     void CreateNewTask() {
       showDialog(
         context: context, 
-        builder: (context) => {
+        builder: (context) {
           return DialogBox(
-            
+            controller: _controller,
           )
         }
       )
