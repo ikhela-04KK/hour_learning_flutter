@@ -2,6 +2,35 @@
 
 import 'package:flutter/material.dart';
 
+class ShadowClickContainer extends StatelessWidget {
+
+  // initialiser les instances de la classe
+  final Widget child; 
+  final Function onTap; 
+
+  // n'oubliez pas de mettre les required sinon il renvenra une errreur 
+  const ShadowClickContainer({required this.child, required this.onTap,super.key});
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () 
+      {
+        onTap();
+      },
+      child: Material(
+        elevation: 70,
+        shadowColor: Colors.black,
+        borderRadius:BorderRadius.circular(20),
+        child: child,
+      ),
+    );
+  }
+}
+
+
 class SettingPage extends StatelessWidget{
   SettingPage({super.key});
 
@@ -14,8 +43,11 @@ class SettingPage extends StatelessWidget{
         ),
         
         body:Center(
-            child: Container(
-              
+            child: ShadowClickContainer(
+              onTap:(){
+                print("je t'ai tapééee");
+              },
+              child: Container(
               height: 300,
               width: 300,
               decoration: BoxDecoration(
@@ -49,7 +81,9 @@ class SettingPage extends StatelessWidget{
                 ],
               ),
             ),
+            )
         )
       );
   }
 }
+
