@@ -13,7 +13,7 @@ void main() async  {
   await Hive.initFlutter(); 
   
   // creer ma premeire boite pour stocker mes données 
-  final box = Hive.box('todoBox');
+  await Hive.openBox("todoBox");
 
   runApp(MyApp());
 }
