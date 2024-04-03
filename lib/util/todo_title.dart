@@ -16,7 +16,8 @@ class ToDoTitle extends StatelessWidget {
     return Padding(
       padding:EdgeInsets.all(25.0), 
       child: Container(
-        padding: EdgeInsets.all(24.0),
+        // padding: EdgeInsets.all(24.0),
+        padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 25.0, bottom:25.0),
         child: Row(
           children: <Widget>[
             Expanded(
