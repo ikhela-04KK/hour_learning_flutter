@@ -1,15 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-
 import 'Profile_page.dart';
 import 'home_page.dart';
 import 'settings_page.dart';
 
 class FirstPage extends StatefulWidget {
-
-
-
   FirstPage({super.key});
 
   @override
