@@ -30,8 +30,8 @@ class DialogBox extends StatelessWidget {
               controller : controller,
               decoration: InputDecoration(
                 // mettre une border autour de l'input 
-                border: OutlineInputBorder(), 
-                hintText: "Add New Task"
+                border: OutlineInputBorder(),
+                hintText: "Add a new task"
               ),
             ), 
 

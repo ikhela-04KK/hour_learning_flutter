@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   // variable de classe pour le controller pour capturer les valeurs du inputText
   final _controller = TextEditingController(); 
 
-  List TodoTile = [
+  List todoList = [
     ["Make a tutorials", false], 
     ["Build your own", false], 
     ["Talk with Jesus", true],
@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   // implementez une méthode pour le checkbox 
   void checkBoxChanged(bool? value  , int index){
     setState(() {
-      TodoTile[index][1] = !TodoTile[index][1];
+      todoList[index][1] = !todoList[index][1];
     });
   }
 
@@ -69,11 +69,11 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: ListView.builder(
-        itemCount: TodoTile.length,
+        itemCount: todoList.length,
         itemBuilder: (context, index) {
           return ToDoTitle(
-            taskName: TodoTile[index][0], 
-            taskCompleted: TodoTile[index][1], 
+            taskName: todoList[index][0], 
+            taskCompleted: todoList[index][1], 
             onChanged: (value) =>checkBoxChanged(value, index));
         },
       )
