@@ -25,6 +25,7 @@ class ToDoTitle extends StatelessWidget {
               child: Checkbox(
                 value: taskCompleted, 
                 onChanged: onChanged, 
+                activeColor: Colors.black,
               ), 
             ),
             Expanded(
@@ -32,7 +33,10 @@ class ToDoTitle extends StatelessWidget {
               child: Text(
                 taskName, 
                 style: TextStyle(
-                  fontFamily: "JetbrainsMono"
+                  fontFamily: "JetbrainsMono",
+                  decoration: taskCompleted 
+                  ? TextDecoration.lineThrough  // taskcompleted  = true alors souligné le texte 
+                  : TextDecoration.none
                 ),
               ),
             )
