@@ -1,9 +1,20 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todo/page/home_page.dart';
 
-void main() {
+void main() async  {
+
+  // verifie si tous services et framework sont bien lancés avant l'execution de l'application
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // initializer hive 
+  await Hive.initFlutter(); 
+  
+  // creer ma premeire boite pour stocker mes données 
+  final box = Hive.box('todoBox');
+
   runApp(MyApp());
 }
 
