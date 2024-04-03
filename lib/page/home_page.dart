@@ -65,10 +65,7 @@ class _HomePageState extends State<HomePage> {
         db.toDoList.removeAt(index);
         db.updateDatabase();
       });
-    }
-
-    // create new task 
-  
+    }  
 
   // function for create a new task 
     void createNewTask() {
