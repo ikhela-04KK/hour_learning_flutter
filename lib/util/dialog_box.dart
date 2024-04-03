@@ -7,7 +7,11 @@ class DialogBox extends StatelessWidget {
 
   final dynamic controller; 
 
-  DialogBox({super.key , this.controller});
+  // to active save and cancel data 
+  VoidCallback onSave; 
+  VoidCallback onCancel;
+
+  DialogBox({super.key , this.controller, required this.onSave , required this.onCancel});
 
   
 
@@ -44,7 +48,7 @@ class DialogBox extends StatelessWidget {
                 // save button
                 CustomButton(
                   text: "Save", 
-                  onPressed: (){}
+                  onPressed: onSave
                 ),
 
                 // mettre de l'espace entre les bouttons save et cancel 
@@ -52,7 +56,7 @@ class DialogBox extends StatelessWidget {
 
                 CustomButton(
                   text: "Cancel", 
-                  onPressed: (){}
+                  onPressed: onCancel
                 )
 
               ],

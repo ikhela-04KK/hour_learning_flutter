@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // colorSchemeSeed: Colors.yellow, 
         useMaterial3: false,
-        appBarTheme: AppBarTheme(elevation: 0),
         primarySwatch: Colors.yellow
       ),
     );

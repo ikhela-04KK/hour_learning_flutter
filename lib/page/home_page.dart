@@ -38,6 +38,8 @@ class _HomePageState extends State<HomePage> {
         builder: (context) {
           return DialogBox(
             controller: _controller,
+            onSave: (){},
+            onCancel: () => Navigator.of(context).pop(),
           );
         }
       );
