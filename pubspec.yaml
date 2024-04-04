@@ -86,10 +86,7 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 
-  fonts:
-    - family: JetbrainsMono
-      fonts:
-        - asset: font/JetBrainsMono-Medium.ttf
+ ccc
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
