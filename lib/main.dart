@@ -7,7 +7,7 @@ import 'package:todo/page/home_page.dart';
 void main() async  {
 
   // verifie si tous services et framework sont bien lancés avant l'execution de l'application
-  WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
 
   // initializer hive 
   await Hive.initFlutter(); 

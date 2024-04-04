@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
     }else {
       db.loadData();
     }
+    super.initState();
   }
   // variable de classe pour le controller pour capturer les valeurs du inputText
   final _controller = TextEditingController(); 
