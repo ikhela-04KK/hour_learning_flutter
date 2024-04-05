@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:todo/util/custom_button.dart';
@@ -11,9 +11,13 @@ class DialogBox extends StatelessWidget {
   VoidCallback onSave; 
   VoidCallback onCancel;
 
-  DialogBox({super.key , this.controller, required this.onSave , required this.onCancel});
-
-  
+  DialogBox({
+      super.key , 
+      this.controller, 
+      required this.onSave , 
+      required this.onCancel
+    }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +62,6 @@ class DialogBox extends StatelessWidget {
                   text: "Cancel", 
                   onPressed: onCancel
                 )
-
               ],
             )
           ],
